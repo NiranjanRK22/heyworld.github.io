@@ -1,0 +1,51 @@
+.wcj-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.who-can-join-content-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-basis: 35%;
+  box-sizing: border-box;
+}
+
+.who-can-join-content-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 80px;
+}
+
+.wcj-title {
+  text-align: left;
+  /* color: #4caf50; */
+  color: #f98149;
+  font-size: 24px;
+}
+
+.wcj-main-title {
+  color: #003f7d;
+  font-weight: 700;
+  font-size: 54px;
+  text-align: left;
+  margin-top: 0;
+}
+
+.wcj-card-number {
+  color: #003f7d;
+  font-weight: 700;
+  font-size: 24px;
+  margin-right: 10px;
+}
+
+.wcj-card-desc {
+  color: #303030;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.wcj-image-container {
+  align-self: center;
+}

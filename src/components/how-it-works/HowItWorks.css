@@ -1,0 +1,25 @@
+.how-it-works-container {
+  background-color: #003f7d;
+  border-radius: 20px;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.how-it-works-button {
+  background-color: #f98149;
+  color: #fff;
+  width: 500px;
+  height: 60px;
+  font-size: 28px;
+  font-weight: 600;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: -30px auto 0 auto;
+}
+
+.how-it-works-wrapper {
+  padding: 40px 20px;
+}
