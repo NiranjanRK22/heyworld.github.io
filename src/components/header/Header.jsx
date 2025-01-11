@@ -1,7 +1,12 @@
 import React from "react";
+import { NavLink, useLocation } from "react-router-dom";
 import "./Header.css";
 
 function Header() {
+  const location = useLocation();
+
+  const isActiveTestimonials = () => location.hash === "#testimonials";
+
   return (
     <div className="header-container">
       <div className="logo">
@@ -10,35 +15,73 @@ function Header() {
       <nav>
         <ul>
           <li>
-            <a href="/">Home</a>
+            <NavLink
+              to="/"
+              className={({ isActive }) =>
+                isActive && !isActiveTestimonials() ? "active-link" : ""
+              }
+            >
+              Home
+            </NavLink>
           </li>
           <li>
-            <a href="/courses">Courses</a>
+            <NavLink
+              to="/courses"
+              className={({ isActive }) => (isActive ? "active-link" : "")}
+            >
+              Courses
+            </NavLink>
           </li>
           <li>
-            <a href="/services">Services</a>
+            <NavLink
+              to="/services"
+              className={({ isActive }) => (isActive ? "active-link" : "")}
+            >
+              Services
+            </NavLink>
           </li>
           <li>
-            <a href="/testimonials">Testimonials</a>
+            <NavLink
+              to="/#testimonials"
+              className={() => (isActiveTestimonials() ? "active-link" : "")}
+            >
+              Testimonials
+            </NavLink>
           </li>
           <li>
-            <a href="/about-us">About Us</a>
+            <NavLink
+              to="/about-us"
+              className={({ isActive }) => (isActive ? "active-link" : "")}
+            >
+              About Us
+            </NavLink>
           </li>
           <li>
-            <a href="/blogs">Blogs</a>
+            <NavLink
+              to="/blogs"
+              className={({ isActive }) => (isActive ? "active-link" : "")}
+            >
+              Blogs
+            </NavLink>
           </li>
           <li>
-            <a href="/contact">Contact Us</a>
+            <NavLink
+              to="/contact"
+              className={({ isActive }) => (isActive ? "active-link" : "")}
+            >
+              Contact Us
+            </NavLink>
           </li>
           <li>
-            <a href="/gallery">Gallery</a>
+            <NavLink
+              to="/gallery"
+              className={({ isActive }) => (isActive ? "active-link" : "")}
+            >
+              Gallery
+            </NavLink>
           </li>
         </ul>
       </nav>
-      {/* <div className="buttons">
-        <button className="login-btn">Log In</button>
-        <button className="create-account">Create Account</button>
-      </div> */}
     </div>
   );
 }

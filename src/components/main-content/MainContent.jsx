@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
+import { useLocation } from "react-router-dom";
 import "./MainContent.css";
 import WhoCanJoinSection from "../who-can-join-section/WhoCanJoinSection";
 import HowItWorks from "../how-it-works/HowItWorks";
@@ -6,6 +7,15 @@ import PopularCourses from "../popular-courses/PopularCourses";
 import Testimonial from "../testimonial/Testimonial";
 
 function MainContent() {
+  const location = useLocation();
+  const testimonialsRef = useRef(null);
+
+  useEffect(() => {
+    if (location.hash === "#testimonials") {
+      testimonialsRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  }, [location]);
+
   const testimonials = [
     {
       text: "The foundational features of Sketch have been indispensable.",
@@ -41,7 +51,9 @@ function MainContent() {
       <WhoCanJoinSection />
       <HowItWorks />
       <PopularCourses />
-      <Testimonial testimonials={testimonials} />
+      <div ref={testimonialsRef} id="testimonials">
+        <Testimonial testimonials={testimonials} />
+      </div>
     </>
   );
 }

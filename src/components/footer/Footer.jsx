@@ -44,19 +44,20 @@ function Footer() {
           <div className="footer-contact-section">
             <img src={location} alt="location" />
             <p>
-              Navakethan Complex, 6th Floor, 605, 606 A&P opp, CLock Tower, SD
-              Road, Secunderabad, Telangana 500003
+              H.NO 1-68/4 & 1-68/5, Flat No. 201, 2nd Floor, Arunodaya Colony,
+              Silicon Valley, Hi-Tech City, Madhapur, Hyderabad, Telangana
+              500081
             </p>
           </div>
           <div className="footer-contact-section">
             <img src={email} alt="email" />
-            <p>info@heyworld.in</p>
+            <p>heyworldtechnologies@gmail.com</p>
           </div>
           <div className="footer-contact-section">
             <img src={call} alt="phone" />
             <p>
-              +91 8428448903 <br />
-              +91 9475484959
+              +91 9391322822 <br />
+              +91 9176140434
             </p>
           </div>
         </div>

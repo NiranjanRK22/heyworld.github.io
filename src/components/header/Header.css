@@ -50,6 +50,10 @@ nav ul li a {
   margin-right: 16px;
 }
 
+.header-container .active-link {
+  color: #f98149;
+}
+
 /* Responsive Styles */
 
 @media (max-width: 768px) {
