@@ -5,7 +5,9 @@ import "./Header.css";
 function Header() {
   const location = useLocation();
 
+  const isActiveHome = () => location.pathname === "/" && !location.hash;
   const isActiveTestimonials = () => location.hash === "#testimonials";
+  const isActiveServices = () => location.hash === "#services";
 
   return (
     <div className="header-container">
@@ -15,12 +17,7 @@ function Header() {
       <nav>
         <ul>
           <li>
-            <NavLink
-              to="/"
-              className={({ isActive }) =>
-                isActive && !isActiveTestimonials() ? "active-link" : ""
-              }
-            >
+            <NavLink to="/" className={isActiveHome() ? "active-link" : ""}>
               Home
             </NavLink>
           </li>
@@ -34,8 +31,8 @@ function Header() {
           </li>
           <li>
             <NavLink
-              to="/services"
-              className={({ isActive }) => (isActive ? "active-link" : "")}
+              to="/#services"
+              className={isActiveServices() ? "active-link" : ""}
             >
               Services
             </NavLink>
@@ -43,7 +40,7 @@ function Header() {
           <li>
             <NavLink
               to="/#testimonials"
-              className={() => (isActiveTestimonials() ? "active-link" : "")}
+              className={isActiveTestimonials() ? "active-link" : ""}
             >
               Testimonials
             </NavLink>

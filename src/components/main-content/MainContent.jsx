@@ -5,14 +5,20 @@ import WhoCanJoinSection from "../who-can-join-section/WhoCanJoinSection";
 import HowItWorks from "../how-it-works/HowItWorks";
 import PopularCourses from "../popular-courses/PopularCourses";
 import Testimonial from "../testimonial/Testimonial";
+import Services from "../services/Services";
 
 function MainContent() {
   const location = useLocation();
   const testimonialsRef = useRef(null);
+  const servicesRef = useRef(null);
 
   useEffect(() => {
     if (location.hash === "#testimonials") {
       testimonialsRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+
+    if (location.hash === "#services") {
+      servicesRef.current.scrollIntoView({ behavior: "smooth" });
     }
   }, [location]);
 
@@ -47,6 +53,9 @@ function MainContent() {
             height={380}
           />
         </div>
+      </div>
+      <div ref={servicesRef} id="services">
+        <Services />
       </div>
       <WhoCanJoinSection />
       <HowItWorks />
