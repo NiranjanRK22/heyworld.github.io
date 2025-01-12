@@ -1,8 +1,10 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Footer.css";
 import location from "../../assets/svg/locationicon.svg";
 import email from "../../assets/svg/emailicon.svg";
 import call from "../../assets/svg/callicon.svg";
+import linkedin from "../../assets/svg/linkedin.svg";
 
 function Footer() {
   return (
@@ -14,6 +16,29 @@ function Footer() {
             Let Us build your career together Be the first person to transform
             yourself with our unique & world class corporate level trainings.
           </p>
+          <div className="social-links">
+            <Link
+              to="https://www.facebook.com/profile.php?id=61571470367793"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src="./facebook.png" alt="facebook" />
+            </Link>
+            <Link
+              to="https://www.instagram.com/heyworldtechnologies?igsh=enY3NWJsMmkxZmNu&utm_source=qr"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src="./instagram.png" alt="instagram" />
+            </Link>
+            <Link
+              to="https://www.linkedin.com/in/heyworld-it-solutions-71656133b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src={linkedin} alt="email" />
+            </Link>
+          </div>
         </div>
         <div class="footer-links">
           <h5>
