@@ -61,24 +61,25 @@ function Header() {
               Blogs
             </NavLink>
           </li>
-          <li>
+          {/* <li>
             <NavLink
               to="/contact"
               className={({ isActive }) => (isActive ? "active-link" : "")}
             >
               Contact Us
             </NavLink>
-          </li>
-          <li>
+          </li> */}
+          {/* <li>
             <NavLink
               to="/gallery"
               className={({ isActive }) => (isActive ? "active-link" : "")}
             >
               Gallery
             </NavLink>
-          </li>
+          </li> */}
         </ul>
       </nav>
+      <button className="contact-us-btn">Contact us</button>
     </div>
   );
 }
