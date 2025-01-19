@@ -73,6 +73,7 @@
     height: auto;
     margin-left: auto; /* Center the image horizontally */
     margin-right: auto; /* Center the image horizontally */
+    margin-bottom: 48px;
   }
 }
 
@@ -113,6 +114,7 @@
     height: auto;
     margin-left: auto; /* Center the image horizontally */
     margin-right: auto; /* Center the image horizontally */
+    margin-bottom: 48px;
   }
 }
 
@@ -147,5 +149,6 @@
     height: auto;
     margin-left: auto; /* Center the image horizontally */
     margin-right: auto; /* Center the image horizontally */
+    margin-bottom: 48px;
   }
 }
