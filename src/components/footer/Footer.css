@@ -38,6 +38,7 @@ footer {
 
   .footer-links {
     text-align: center;
+    width: 80% !important;
   }
 
   .footer-links h5 {
