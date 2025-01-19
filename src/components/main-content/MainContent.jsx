@@ -49,8 +49,9 @@ function MainContent() {
           <img
             src="./home-image3.png"
             alt="Skill up"
-            width={500}
-            height={380}
+            // width={500}
+            // height={380}
+            className="home-first-img"
           />
         </div>
       </div>

@@ -2,6 +2,7 @@
   display: flex;
   justify-content: center;
   margin-bottom: 40px;
+  flex-wrap: wrap; /* Ensure content wraps on smaller screens */
 }
 
 .who-can-join-content-section {
@@ -10,17 +11,18 @@
   align-items: center;
   flex-basis: 35%;
   box-sizing: border-box;
+  margin-bottom: 20px; /* Add spacing at the bottom */
 }
 
 .who-can-join-content-wrapper {
   display: flex;
   flex-wrap: wrap;
   gap: 80px;
+  justify-content: space-between; /* Space between content on larger screens */
 }
 
 .wcj-title {
   text-align: left;
-  /* color: #4caf50; */
   color: #f98149;
   font-size: 24px;
 }
@@ -48,4 +50,102 @@
 
 .wcj-image-container {
   align-self: center;
+  margin-top: 20px; /* Add space between content and image */
+}
+
+@media (max-width: 1200px) {
+  .wcj-container {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  .who-can-join-content-wrapper {
+    gap: 40px; /* Reduce gap on medium screens */
+  }
+
+  .who-can-join-content-section {
+    flex-basis: 45%;
+  }
+
+  .wcj-image-container img {
+    width: 60%;
+    height: auto;
+    margin-left: auto; /* Center the image horizontally */
+    margin-right: auto; /* Center the image horizontally */
+  }
+}
+
+@media (max-width: 768px) {
+  .wcj-container {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  .who-can-join-content-wrapper {
+    gap: 20px; /* Reduce gap on smaller screens */
+  }
+
+  .who-can-join-content-section {
+    flex-basis: 90%; /* Make the content take full width on smaller devices */
+  }
+
+  .wcj-title {
+    font-size: 20px; /* Adjust font size for mobile screens */
+  }
+
+  .wcj-main-title {
+    font-size: 32px; /* Adjust font size for mobile screens */
+    text-align: center;
+  }
+
+  .wcj-card-number {
+    font-size: 20px; /* Adjust font size for mobile screens */
+  }
+
+  .wcj-card-desc {
+    font-size: 18px; /* Adjust font size for mobile screens */
+  }
+
+  .wcj-image-container img {
+    width: 60%; /* Set the image width to 80% */
+    height: auto;
+    margin-left: auto; /* Center the image horizontally */
+    margin-right: auto; /* Center the image horizontally */
+  }
+}
+
+@media (max-width: 480px) {
+  .wcj-title {
+    font-size: 18px; /* Smaller font size for extra small screens */
+  }
+
+  .wcj-main-title {
+    font-size: 28px; /* Smaller font size for extra small screens */
+    text-align: center;
+  }
+
+  .wcj-card-number {
+    font-size: 18px; /* Adjust font size for extra small screens */
+  }
+
+  .wcj-card-desc {
+    font-size: 16px; /* Adjust font size for extra small screens */
+  }
+
+  .who-can-join-content-wrapper {
+    gap: 15px; /* Smaller gap for mobile */
+  }
+
+  .who-can-join-content-section {
+    flex-basis: 100%; /* Take full width on mobile */
+  }
+
+  .wcj-image-container img {
+    width: 60%;
+    height: auto;
+    margin-left: auto; /* Center the image horizontally */
+    margin-right: auto; /* Center the image horizontally */
+  }
 }

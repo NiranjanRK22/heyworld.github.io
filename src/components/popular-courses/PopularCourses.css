@@ -5,6 +5,27 @@
   color: #003f7d;
 }
 
+/* For large screens (laptops and desktops) */
+@media (max-width: 1200px) {
+  .popular-courses-title {
+    font-size: 42px; /* Slightly smaller font size on medium devices */
+  }
+}
+
+/* For tablet screens */
+@media (max-width: 768px) {
+  .popular-courses-title {
+    font-size: 36px; /* Smaller font size for tablets */
+  }
+}
+
+/* For mobile screens */
+@media (max-width: 480px) {
+  .popular-courses-title {
+    font-size: 28px; /* Even smaller font size for mobile devices */
+  }
+}
+
 .card-img {
   margin: 10px;
   width: 110px;
