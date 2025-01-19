@@ -20,6 +20,35 @@ footer {
   margin-right: 50px;
 }
 
+/* Responsive styles */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-logo {
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  .footer-logo p {
+    text-align: center !important;
+  }
+
+  .footer-links {
+    text-align: center;
+  }
+
+  .footer-links h5 {
+    text-align: center;
+  }
+
+  .footer-links li {
+    text-align: center;
+  }
+}
+
 .footer-logo-img {
   width: 180px;
   height: 180px;

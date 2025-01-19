@@ -39,6 +39,14 @@ const StyledHeader = styled.header`
     .menuToggleBtn {
       display: block;
     }
+
+    .nav_logo {
+      .nav-logo-link {
+        img {
+          height: 120px;
+        }
+      }
+    }
   }
 `;
 const NavManu = styled.ul`
@@ -71,6 +79,10 @@ const NavManu = styled.ul`
     align-items: center;
     width: 100%;
     margin-top: 5px;
+
+    .nav-menu-list {
+      margin: 10px 0;
+    }
   }
 `;
 
