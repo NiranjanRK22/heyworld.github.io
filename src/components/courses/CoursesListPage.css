@@ -73,6 +73,7 @@
   font-weight: 600;
   display: flex;
   align-items: center;
+  cursor: pointer;
 }
 
 .card-icon {
@@ -103,4 +104,165 @@
   border: none;
   border-radius: 8px;
   font-size: 24px;
+}
+
+.modal-header {
+  background-color: #003f7d;
+  height: 30%;
+  color: #fff;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-img {
+  height: 80px;
+}
+
+.modal-title {
+  font-size: 40px;
+}
+
+.react-responsive-modal-modal {
+  padding: 0 !important;
+  border-radius: 16px;
+  max-width: 600px !important;
+}
+
+.react-responsive-modal-closeButton {
+  fill: #fff;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.modal-form {
+  padding: 20px;
+}
+
+.form-label {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #003f7d;
+}
+
+.form-input {
+  width: 430px;
+  height: 42px;
+  border: 1px solid #c3cad9;
+  border-radius: 6px;
+}
+
+.react-international-phone-input-container
+  .react-international-phone-country-selector-button {
+  width: 60px !important;
+  height: 42px !important;
+  border: 1px solid #c3cad9 !important;
+  border-radius: 6px 0 0 6px !important;
+}
+
+.react-international-phone-input-container .react-international-phone-input {
+  width: 370px !important;
+  height: 42px !important;
+  border: 1px solid #c3cad9 !important;
+  border-radius: 0 6px 6px 0 !important;
+}
+
+.agree-label {
+  color: #b1b1b1;
+  height: 14px;
+  font-family: "poppins";
+}
+
+.agree-checkbox {
+  width: 19px;
+  height: 20px;
+  stroke: #b1b1b1;
+  appearance: none; /* Removes the default checkbox appearance */
+  border: 2px solid #c3cad9; /* Default border */
+  border-radius: 4px; /* Rounded corners */
+  background-color: #fff; /* Default background color */
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s ease; /* Smooth transition for color change */
+}
+
+/* Adding a checkmark after the checkbox is checked */
+.agree-checkbox:checked::before {
+  content: "✔"; /* Checkmark symbol */
+  color: white;
+  font-size: 14px; /* Adjust the size of the checkmark */
+}
+
+.agree-checkbox:checked {
+  background-color: #f98149; /* Orange background when checked */
+  border-color: #f98149; /* Orange border when checked */
+}
+
+.form-group-agree {
+  display: flex;
+  align-items: center;
+}
+
+.agree-label-highlight {
+  color: #f98149;
+}
+
+.submit-btn {
+  width: 160px;
+  height: 40px;
+  background-color: #f98149;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.submit-btn-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 16px;
+}
+
+.success-modal {
+  width: 100%;
+  max-width: 400px;
+}
+
+.success-img {
+  width: 137px;
+  height: 114px;
+}
+
+.success-modal-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.success-modal-title {
+  color: #000000;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.success-modal-desc {
+  color: #000000;
+  font-size: 16px;
+}
+
+.ok-btn {
+  width: 120px !important;
 }

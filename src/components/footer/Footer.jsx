@@ -76,13 +76,13 @@ function Footer() {
           </div>
           <div className="footer-contact-section">
             <img src={email} alt="email" />
-            <p>heyworldtechnologies@gmail.com</p>
+            <p>heyworldadmin@heyworlditsolutions.com</p>
           </div>
           <div className="footer-contact-section">
             <img src={call} alt="phone" />
             <p>
-              +91 9391322822 <br />
-              +91 9176140434
+              +91 8019373636 <br />
+              +91 8019393636
             </p>
           </div>
         </div>
