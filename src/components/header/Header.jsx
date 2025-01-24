@@ -11,6 +11,9 @@ const StyledHeader = styled.header`
   display: flex;
   align-items: center;
   justify-content: space-around;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
   .nav_logo {
     padding: 0 12px;
     .nav-logo-link {
@@ -19,7 +22,7 @@ const StyledHeader = styled.header`
       color: #fab005;
       font-weight: bold;
       img {
-        height: 140px;
+        height: 120px;
       }
     }
   }
@@ -31,6 +34,7 @@ const StyledHeader = styled.header`
     right: 20px;
     top: 55px;
     cursor: pointer;
+    margin-right: 20px;
   }
 
   @media screen and (max-width: 768px) {
@@ -66,6 +70,9 @@ const NavManu = styled.ul`
     color: #cccccc;
     display: block;
     font-weight: 600;
+    &:hover {
+      color: #f98149;
+    }
   }
   .active-link {
     color: #f98149;

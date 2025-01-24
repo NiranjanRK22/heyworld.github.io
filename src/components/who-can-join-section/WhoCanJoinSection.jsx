@@ -43,12 +43,7 @@ function WhoCanJoinSection() {
         </div>
       </div>
       <div className="wcj-image-container">
-        <img
-          src="./whocanjoinimg.png"
-          alt="who-can-join"
-          width={500}
-          height={480}
-        />
+        <img src="./whocanjoinimg.png" alt="who-can-join" />
       </div>
     </div>
   );

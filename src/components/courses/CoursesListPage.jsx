@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import emailjs from "@emailjs/browser";
 import { PhoneInput } from "react-international-phone";
 import "react-international-phone/style.css";
 import { Modal } from "react-responsive-modal";
@@ -104,10 +105,49 @@ function CoursesListPage() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    // Handle form submission here, e.g., send data to server
-    console.log({ name, email, mobileNumber });
+
+    emailjs
+      .sendForm(
+        "service_izxopqo",
+        "template_zq9cb87",
+        event.target,
+        "WGWajlHxtqDM1lu_Y"
+      )
+      .then(
+        (result) => {
+          console.log(result.text); // Success message or response
+          setOpenFirst(false);
+          setOpenSecond(true);
+        },
+        (error) => {
+          console.log(error.text); // Log errors if the email fails
+        }
+      );
+
+    emailjs
+      .sendForm(
+        "service_izxopqo",
+        "template_cle0w16",
+        event.target,
+        "WGWajlHxtqDM1lu_Y"
+      )
+      .then(
+        (result) => {
+          console.log(result.text); // Success message or response
+          setOpenFirst(false);
+          setOpenSecond(true);
+        },
+        (error) => {
+          console.log(error.text); // Log errors if the email fails
+        }
+      );
+
     setOpenFirst(false);
     setOpenSecond(true);
+    setName("");
+    setEmail("");
+    setMobileNumber("");
+    setAgreed(false);
   };
 
   const handleOpenModal = (course) => {
@@ -161,6 +201,7 @@ function CoursesListPage() {
             <input
               type="text"
               id="name"
+              name="name"
               value={name}
               onChange={(e) => setName(e.target.value)}
               required
@@ -174,17 +215,24 @@ function CoursesListPage() {
             <input
               type="email"
               id="email"
+              name="email"
               className="form-input"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
             />
           </div>
+          <input
+            type="hidden"
+            name="courseTitle" // This will be used in the template
+            value={selectedCourse?.title || ""} // Pass the selected course title
+          />
           <div className="form-group">
             <label htmlFor="phone" className="form-label">
               Mobile Number*
             </label>
             <PhoneInput
+              name="mobile"
               defaultCountry="in"
               value={mobileNumber}
               onChange={(mobile) => setMobileNumber(mobile)}

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import emailjs from "@emailjs/browser";
 import { PhoneInput } from "react-international-phone";
 import "react-international-phone/style.css";
 import { Modal } from "react-responsive-modal";
@@ -79,10 +80,49 @@ function PopularCourses() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    // Handle form submission here, e.g., send data to server
-    console.log({ name, email, mobileNumber });
+
+    emailjs
+      .sendForm(
+        "service_izxopqo",
+        "template_zq9cb87",
+        event.target,
+        "WGWajlHxtqDM1lu_Y"
+      )
+      .then(
+        (result) => {
+          console.log(result.text); // Success message or response
+          setOpenFirst(false);
+          setOpenSecond(true);
+        },
+        (error) => {
+          console.log(error.text); // Log errors if the email fails
+        }
+      );
+
+    emailjs
+      .sendForm(
+        "service_izxopqo",
+        "template_cle0w16",
+        event.target,
+        "WGWajlHxtqDM1lu_Y"
+      )
+      .then(
+        (result) => {
+          console.log(result.text); // Success message or response
+          setOpenFirst(false);
+          setOpenSecond(true);
+        },
+        (error) => {
+          console.log(error.text); // Log errors if the email fails
+        }
+      );
+
     setOpenFirst(false);
     setOpenSecond(true);
+    setName("");
+    setEmail("");
+    setMobileNumber("");
+    setAgreed(false);
   };
 
   const handleOpenModal = (course) => {

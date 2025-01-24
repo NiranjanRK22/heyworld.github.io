@@ -156,6 +156,8 @@
   height: 42px;
   border: 1px solid #c3cad9;
   border-radius: 6px;
+  font-size: 16px;
+  transition: font-size 0.3s ease;
 }
 
 .react-international-phone-input-container
@@ -171,6 +173,8 @@
   height: 42px !important;
   border: 1px solid #c3cad9 !important;
   border-radius: 0 6px 6px 0 !important;
+  font-size: 16px;
+  transition: font-size 0.3s ease;
 }
 
 .agree-label {
@@ -225,6 +229,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 
 .submit-btn-container {
@@ -265,4 +270,54 @@
 
 .ok-btn {
   width: 120px !important;
+  cursor: pointer;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .modal-title {
+    font-size: 1.5rem;
+  }
+
+  .form-input {
+    width: 100%;
+  }
+
+  .submit-btn {
+    width: 30%;
+    margin-top: 20px;
+  }
+
+  .react-responsive-modal-modal {
+    width: 90% !important;
+    padding: 10px;
+  }
+
+  .modal-img {
+    height: 45px;
+  }
+}
+
+@media (max-width: 480px) {
+  .courses-title {
+    font-size: 2rem;
+  }
+
+  .modal-title {
+    font-size: 1.2rem;
+  }
+
+  .form-input,
+  .react-international-phone-input-container .react-international-phone-input {
+    width: 100% !important;
+  }
+
+  .success-modal-content {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .modal-img {
+    height: 40px;
+  }
 }

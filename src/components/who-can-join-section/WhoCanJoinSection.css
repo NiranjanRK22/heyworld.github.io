@@ -53,6 +53,12 @@
   margin-top: 20px; /* Add space between content and image */
 }
 
+.wcj-image-container img {
+  width: 80%;
+  height: auto;
+  max-width: 500px;
+}
+
 @media (max-width: 1200px) {
   .wcj-container {
     flex-direction: column;

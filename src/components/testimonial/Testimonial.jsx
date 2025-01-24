@@ -10,7 +10,7 @@ const Testimonials = () => {
       image:
         "https://images.unsplash.com/photo-1605462863863-10d9e47e15ee?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       name: "Lasya",
-      text: "The training is exceptional and more than enough for anyone with the right motivation to become a software engineer. It's that good!",
+      text: "Hey World IT solutions provided real-time exposure to the concepts that they have been teaching which was quite useful. I also got familiar with key terminologies used in companies, enhancing my understanding of the professional workflow.",
     },
     {
       id: 2,
